@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div>
+        <p></p>
+        <figure></figure>
+    </div>
+
+    <script>
+        const elPtag= document.querySelector('div p');
+        const elPtag1= document.querySelector('div figure');
+        let date = new Date();
+        
+        let month = ['일월','이월','삼월','사월','오월','유월','칠월','팔월','구월','시월','십일월','십이월']
+        console.log(date)
+
+        elPtag.textContent = date;
+        elPtag1.textContent = month[date.getMonth()]+date.getDate();
+
+
+    </script>
+</body>
+</html>

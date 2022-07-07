@@ -1,0 +1,1049 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Orelega+One&family=Pattaya&family=Shrikhand&display=swap");
+@font-face {
+  font-family: "Recoleta";
+  src: url(./font/Recoleta-RegularDEMO.otf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  body {
+    background-color: #FFBB00;
+    overflow: hidden;
+  }
+
+  header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: 0.5s;
+    z-index: 99;
+  }
+  header.active {
+    transform: translateY(0%);
+  }
+  header > a {
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-image: url(./images/nc644-btn-nav.png);
+    background-repeat: no-repeat;
+    background-size: 24px 12px;
+    background-position: center;
+    margin: 0 5px;
+  }
+  header > nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5%;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFBB00;
+    -webkit-animation: navani 0.5s forwards;
+            animation: navani 0.5s forwards;
+  }
+  @-webkit-keyframes navani {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes navani {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  header > nav > .navclose {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border: solid 1px #000;
+    background-image: url(./images/nc644-btn-close-black.png);
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 40px;
+  }
+  header > nav > a {
+    font-size: 36px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 25px;
+  }
+  header > div {
+    margin: 0 5px;
+  }
+  header > div > p {
+    text-align: center;
+    font-size: 14px;
+  }
+  header > div:nth-of-type(1) {
+    margin-top: 7%;
+  }
+
+  footer {
+    width: 100%;
+    padding: 5%;
+    background-color: #fff;
+  }
+  footer div {
+    letter-spacing: -0.5px;
+  }
+  footer div:nth-of-type(1) {
+    text-align: center;
+    padding: 5% 0;
+    margin-bottom: 40px;
+  }
+  footer div:nth-of-type(1) p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  footer div:nth-of-type(2) > p {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    white-space: pre-line;
+  }
+
+  .topnav {
+    position: fixed;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -0.5px;
+    right: 5%;
+    bottom: 3%;
+    z-index: 99;
+  }
+  .topnav > span {
+    display: none;
+    -webkit-animation: topnavani 0.3s forwards linear;
+            animation: topnavani 0.3s forwards linear;
+  }
+  @-webkit-keyframes topnavani {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes topnavani {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  section {
+    padding: 34px 0 0px;
+  }
+
+  .box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fb0;
+  }
+  .box .back1 {
+    width: 100%;
+    -webkit-animation: ani 25s infinite linear;
+            animation: ani 25s infinite linear;
+    z-index: -10;
+  }
+  .box .back1 > div {
+    display: flex;
+    justify-content: space-between;
+    height: 16.66vh;
+  }
+  .box .back1 > div > img {
+    display: block;
+    width: 20%;
+  }
+  .box .back1 > div > p {
+    line-height: 0;
+    width: 20%;
+  }
+  .box .door {
+    z-index: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .box .door > img {
+    display: block;
+    margin: 18% auto 0;
+    width: 80%;
+  }
+
+  @-webkit-keyframes ani {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes ani {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  .intro {
+    padding-top: 130px;
+    width: 100%;
+    height: 1400px;
+    overflow: hidden;
+  }
+  .intro .frame {
+    margin: 0 auto;
+    position: relative;
+    width: 65%;
+  }
+  .intro .frame > img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .intro .count-warp {
+    width: 100%;
+    position: fixed;
+    top: 30%;
+    left: 0%;
+    transform-origin: top;
+    transition: 0.3s;
+  }
+  .intro .count-warp.style {
+    z-index: -99;
+    opacity: 0.07;
+  }
+  .intro .count-warp .count {
+    display: block;
+  }
+  .intro .count-warp .count p {
+    text-align: center;
+    font-size: 90px;
+    line-height: 90px;
+    font-family: "Croissant One", cursive;
+    letter-spacing: -11px;
+  }
+  .intro .count-warp .change {
+    margin: 0 auto;
+    width: 138px;
+  }
+  .intro .count-warp .change > div {
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    /*display:flex;*/
+    display: none;
+  }
+  .intro .count-warp .change > div .num0 {
+    -webkit-animation: change 0.5s 0.5s forwards;
+            animation: change 0.5s 0.5s forwards;
+  }
+  .intro .count-warp .change > div .num1 {
+    -webkit-animation: change 0.5s 1s forwards;
+            animation: change 0.5s 1s forwards;
+  }
+  .intro .count-warp .change > div .num2 {
+    -webkit-animation: change 0.5s 1.5s forwards;
+            animation: change 0.5s 1.5s forwards;
+  }
+  @-webkit-keyframes change {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes change {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  .intro .count-warp .change > div > div > span {
+    display: block;
+    font-size: 90px;
+    text-align: right;
+    letter-spacing: -11px;
+    font-family: "Croissant One", cursive;
+    line-height: 90px;
+  }
+  .intro .count-warp > span {
+    margin: 0 auto;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #000;
+  }
+  .intro .dec {
+    position: absolute;
+    left: 50%;
+    top: 33%;
+    transform: translateX(-50%);
+  }
+  .intro .dec .loading {
+    width: 125px;
+    height: 18px;
+    margin: 20px auto 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+  }
+  .intro .dec .scrolldownani {
+    width: 125px;
+    height: 18px;
+    margin: 20px auto 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    display: none;
+  }
+  .intro .dec .scrolldownani > p {
+    -webkit-animation: scrolldown 0.8s infinite linear;
+            animation: scrolldown 0.8s infinite linear;
+  }
+  @-webkit-keyframes scrolldown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  @keyframes scrolldown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  .intro .dec > span {
+    margin: 25px auto 0;
+    display: block;
+    width: 24px;
+    height: 32px;
+    background-image: url(./images/nc644-bul-arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .intro .introtext {
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    white-space: pre-line;
+    text-align: center;
+  }
+  .intro .introtext p:nth-of-type(1) {
+    line-height: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .intro .introtext p:nth-of-type(2) {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .about {
+    position: relative;
+    overflow: hidden;
+  }
+  .about > img:nth-of-type(1) {
+    display: block;
+    width: 260px;
+    position: absolute;
+    top: 40%;
+    left: -55%;
+  }
+  .about > img:nth-of-type(2) {
+    display: block;
+    width: 150px;
+    position: absolute;
+    bottom: 5%;
+    right: -25%;
+  }
+  .about .text {
+    width: 100%;
+    position: relative;
+  }
+  .about .text .sub {
+    white-space: pre-line;
+    margin-left: 15%;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  .about .text h2 {
+    width: 120px;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
+    margin: 0 auto 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-image: url(./images/nc644-tit-bean-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .about .text h3 {
+    text-align: center;
+    white-space: pre-line;
+    font-size: 48px;
+    letter-spacing: -1.6px;
+    line-height: 46px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+  .about .text h3 span {
+    font-family: "Recoleta";
+  }
+  .about .text > p:nth-of-type(2) {
+    position: absolute;
+    left: 55%;
+    white-space: pre-line;
+    font-size: 14px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+  }
+  .about .text > p:nth-of-type(2) > span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(./images/nc644-bul-tit-bg.gif);
+    background-size: cover;
+  }
+  .about .card {
+    margin-bottom: 100px;
+    height: 100vh;
+  }
+  .about .card .flip {
+    width: 100%;
+    height: 90%;
+    perspective: 1000px;
+    transform: translateY(-5%);
+  }
+  .about .card .flip .warp {
+    margin: 0 auto;
+    width: 80%;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: 0.5s;
+  }
+  .about .card .flip .warp .front {
+    position: absolute;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border: solid 2px #000;
+    transform: scale(0.55) rotate(-15deg) translateX(0%);
+    transition: 0.5s;
+  }
+  .about .card .flip .warp .front img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .about .card .flip .warp .back {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    background-color: #fff;
+    margin: 0 auto;
+    border: solid 1px #000;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-family: "Recoleta";
+    transform: rotateY(180deg);
+    transition: 0.5s;
+  }
+  .about .card .flip .warp .back div:nth-of-type(1) {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #000;
+  }
+  .about .card .flip .warp .back div:nth-of-type(1) p {
+    white-space: pre-line;
+    padding: 0 20px;
+  }
+  .about .card .flip .warp .back div:nth-of-type(1) img {
+    width: 25%;
+  }
+  .about .card .flip .warp .back div:nth-of-type(2) {
+    white-space: pre-line;
+    font-size: 13px;
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    letter-spacing: -0.5px;
+  }
+  .about .card .flip .warp .back div:nth-of-type(2) p:nth-of-type(1) {
+    font-size: 16px;
+    letter-spacing: -0.1px;
+  }
+  .about .card .flip .warp .back div:nth-of-type(3) img {
+    margin: 0 auto;
+    display: block;
+    width: 33%;
+    margin-bottom: 10px;
+  }
+  .about .card .flip .warp .back div:nth-of-type(3) > p {
+    text-align: center;
+    white-space: pre-line;
+    font-size: 12px;
+    margin-bottom: 5%;
+  }
+  .about .card .flip .warp .back a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: #000;
+    border-radius: 16px;
+    background-image: url(./images/nc644-btn-close.png);
+    background-size: 12px 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .about .card .circlebtn {
+    margin: 0px auto 0;
+    width: 130px;
+    height: 130px;
+    position: relative;
+    transform: translateY(-90%);
+  }
+  .about .card .circlebtn svg {
+    width: 100%;
+    height: 100%;
+    -webkit-animation: circle 15s infinite linear;
+            animation: circle 15s infinite linear;
+  }
+  @-webkit-keyframes circle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes circle {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .about .card .circlebtn div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+  }
+  .about .card .circlebtn div p {
+    width: 100%;
+    white-space: pre-line;
+    text-align: center;
+    text-transform: uppercase;
+    font: 600 14px Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+  }
+  .about .card .circlebtn div img {
+    margin: 0 auto;
+    display: block;
+    width: 10px;
+    height: 14px;
+    transform: rotate(-90deg);
+  }
+
+  .mission h2 {
+    width: 120px;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
+    margin: 0 auto 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-image: url(./images/nc644-tit-bean-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mission > div p {
+    text-align: center;
+    white-space: pre-line;
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+  .mission > div p > span {
+    font-family: "Recoleta";
+  }
+  .mission ul {
+    position: relative;
+    height: 100vh;
+  }
+  .mission ul li {
+    position: relative;
+    margin: 0 auto;
+  }
+  .mission ul .list01 {
+    width: 65%;
+    transform: translateY(40%) rotate(-15deg);
+  }
+  .mission ul .list01 > div {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .mission ul .list01 > div > p {
+    white-space: pre-line;
+  }
+  .mission ul .list01 > div > p:nth-of-type(1) {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+  .mission ul .list01 > div > p:nth-of-type(1) > span {
+    font-family: "Recoleta";
+  }
+  .mission ul .list01 > div > p:nth-of-type(2) {
+    font-size: 13px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+  }
+  .mission ul .list01 > div > span {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #000;
+    color: #FFBB00;
+    border-radius: 12px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  .mission ul .list01 > img {
+    width: 100%;
+    display: block;
+  }
+  .mission ul .list02 {
+    width: 50%;
+    transform: translateY(50%) rotate(17deg);
+  }
+  .mission ul .list02 > div {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .mission ul .list02 > div > p {
+    white-space: pre-line;
+  }
+  .mission ul .list02 > div > p:nth-of-type(1) {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+  .mission ul .list02 > div > p:nth-of-type(1) > span {
+    font-family: "Recoleta";
+  }
+  .mission ul .list02 > div > p:nth-of-type(2) {
+    font-size: 13px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+  }
+  .mission ul .list02 > div > span {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #000;
+    color: #FFBB00;
+    border-radius: 12px;
+    font-weight: bold;
+    margin: 30px 0 100px;
+  }
+  .mission ul .list02 > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .mission ul .list03 {
+    width: 65%;
+    transform: translateY(130%) rotate(0deg);
+  }
+  .mission ul .list03 div {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .mission ul .list03 div > p {
+    white-space: pre-line;
+  }
+  .mission ul .list03 div > p:nth-of-type(2) {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+  .mission ul .list03 div > p:nth-of-type(2) > span {
+    font-family: "Recoleta";
+  }
+  .mission ul .list03 div > p:nth-of-type(1) {
+    font-size: 13px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    margin-top: 70px;
+  }
+  .mission ul .list03 div > span {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #000;
+    color: #FFBB00;
+    border-radius: 12px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  .mission ul .list03 img {
+    width: 100%;
+  }
+
+  .gradient {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fcebf3 80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gradient div {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+  .gradient div p {
+    font-size: 20px;
+    flex-shrink: 0;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-animation: ani1 10s infinite linear;
+            animation: ani1 10s infinite linear;
+  }
+  @-webkit-keyframes ani1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes ani1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  .gradient div p::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    margin-left: 24px;
+    display: inline-block;
+    background-image: url(./images/nc644-bul-emoji.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+  }
+
+  .work {
+    padding: 0;
+  }
+
+  .doguri {
+    padding-bottom: 15px;
+    background-color: #FCEBF3;
+  }
+  .doguri h2 {
+    width: 120px;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
+    margin: 0 auto 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-image: url(./images/nc644-tit-bean-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .doguri > div {
+    width: 170px;
+    margin: 0 auto 15px;
+  }
+  .doguri > div img {
+    width: 100%;
+  }
+  .doguri > div:nth-of-type(2) {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: solid 1px #000;
+    border-radius: 50px;
+  }
+  .doguri > div:nth-of-type(2) > p {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: pre-line;
+    text-align: center;
+  }
+  .doguri > div:nth-of-type(2) > p > img {
+    margin: 5px auto;
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    transform: rotate(-90deg);
+  }
+  .doguri > p {
+    white-space: pre-line;
+    text-align: center;
+    color: #593137;
+    font: bold 16px "Noto Sans KR";
+    letter-spacing: -0.6px;
+  }
+  .doguri > img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .spoonz {
+    width: 100%;
+    background-color: #FFADA7;
+    padding-bottom: 15px;
+  }
+  .spoonz div {
+    margin: 0 auto;
+  }
+  .spoonz div:nth-of-type(1) {
+    padding-top: 30px;
+    width: 240px;
+    margin-bottom: 15px;
+  }
+  .spoonz div:nth-of-type(1) img {
+    width: 100%;
+  }
+  .spoonz div:nth-of-type(2) {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: solid 1px #000;
+    border-radius: 50px;
+  }
+  .spoonz div:nth-of-type(2) > p {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: pre-line;
+    text-align: center;
+  }
+  .spoonz div:nth-of-type(2) > p > img {
+    margin: 5px auto;
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    transform: rotate(-90deg);
+  }
+  .spoonz > p {
+    text-align: center;
+    white-space: pre-line;
+    font: bold 15px "Noto Sans KR";
+    line-height: 26px;
+    color: #fff;
+  }
+  .spoonz img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .amenity {
+    width: 100%;
+    position: relative;
+    line-height: 0;
+  }
+  .amenity > div {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .amenity > div > img {
+    display: block;
+    width: 80%;
+    margin: 120px auto 0;
+  }
+  .amenity > div > div {
+    margin: 310px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: solid 1px #fff;
+    border-radius: 50px;
+  }
+  .amenity > div > div > p {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: pre-line;
+    text-align: center;
+    line-height: 16px;
+    color: #fff;
+  }
+  .amenity > div > div > p > img {
+    margin: 5px auto;
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    transform: rotate(-90deg);
+  }
+  .amenity > img {
+    width: 100%;
+  }
+
+  .shop {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 74px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .shop div {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .shop div > p {
+    white-space: pre-line;
+    font-size: 32px;
+    letter-spacing: -1px;
+    line-height: 32px;
+  }
+  .shop div > p > span {
+    font-family: "Recoleta";
+  }
+  .shop div > img {
+    margin: 0 auto;
+    display: block;
+    width: 25%;
+    margin-bottom: 15px;
+  }
+  .shop img {
+    margin: 21px auto 0;
+    display: block;
+    width: 40%;
+  }
+  .shop > p {
+    margin-top: 16px;
+    white-space: pre-line;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}/*# sourceMappingURL=index.css.map */
