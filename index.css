@@ -104,6 +104,7 @@ a {
   header > div > p {
     text-align: center;
     font-size: 14px;
+    font-weight: bold;
   }
   header > div:nth-of-type(1) {
     margin-top: 7%;
@@ -1017,6 +1018,7 @@ a {
   .shop div {
     width: 90%;
     margin: 0 auto;
+    transform: translateY(100%);
   }
   .shop div > p {
     white-space: pre-line;
@@ -1033,10 +1035,11 @@ a {
     width: 25%;
     margin-bottom: 15px;
   }
-  .shop img {
+  .shop > img {
     margin: 21px auto 0;
     display: block;
     width: 40%;
+    transform: translateY(100%);
   }
   .shop > p {
     margin-top: 16px;
@@ -1045,5 +1048,6 @@ a {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     line-height: 18px;
+    transform: translateY(100%);
   }
 }/*# sourceMappingURL=index.css.map */

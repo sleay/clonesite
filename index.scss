@@ -102,6 +102,7 @@ a{
             >p{
                 text-align: center;
                 font-size: 14px;
+                font-weight: bold;
             }
         }
         >div:nth-of-type(1){
@@ -1007,6 +1008,7 @@ a{
         div{
             width: 90%;
             margin: 0 auto;
+            transform: translateY(100%);
             
             >p{
                 white-space: pre-line;
@@ -1027,10 +1029,11 @@ a{
 
 
         }
-        img{
+        >img{
             margin: 21px auto 0; 
             display: block;
             width: 40%;
+            transform: translateY(100%);
         }
         >p{
             margin-top: 16px;
@@ -1039,6 +1042,7 @@ a{
             font-family: Arial, Helvetica, sans-serif;
             font-weight: 700;
             line-height: 18px;
+            transform: translateY(100%);
         }
     }
 

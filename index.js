@@ -21,10 +21,10 @@ let scl5 = 0;           //mission 변수
 let scl6 = {a1:0,a2:0};
 
 let scl7 = 0;
-let scl8 = {a1:0,a2:0};
+let scl8 = {a1:0,a2:0}; //work 변수
 
 let scl9 = 0;
-let scl10 = {a1:0,a2:0}
+let scl10 = {a1:0,a2:0} //shop 변수
 
 
 
@@ -143,7 +143,7 @@ function topnav(){
                 $('.topnav > span').css({display:"inline"})
             }
             else{
-                $('.topnav > span').css({display:"none"})
+                $('.topnav > span').hide()
             }
         
     });
@@ -400,25 +400,43 @@ function workscroll(){
     });
 }
 
-// function shopscroll(){
-//     $(window).on('scroll',function(){
+function shopscroll(){
+    $(window).on('scroll',function(){
 
-//         if(sclnum > $('.shop').offset().top){
+        if(sclnum+$(window).height() > $('.shop').offset().top){
 
-//         }
+
+            let ro=50;
+            scl10.a1 = $(window).scrollTop();
+            if(scl10.a1 > scl10.a2){
+                if(scl9 <100){
+                    ++scl9;
+                }
+            }
+            else{
+                if(scl9 > 0){
+                    --scl9;
+                }
+            }
+            scl10.a2=scl10.a1;
+
+            console.log(scl10,scl9)
+
+
+
+
+        
+            $('.shop > div').css({transform:`translateY(${ro-(scl9/1.5)}%)`,transition:'0.3s'});
+            $('.shop > p').css({transform:`translateY(${ro-(scl9/1.5)}%)`,transition:'0.3s'});
+            $('.shop > img').css({transform:`translateY(${ro-(scl9/1.5)}%)`,transition:'0.3s'});
+
+
+        }
 
         
 
-//     });
-// }
-$(window).on('scroll',function(){
-    console.log(
-        sclnum,
-        $('.shop').offset().top,
-        $(document).height()-$('.shop').offset().top,
-
-    )
-});
+    });
+}
 
 
 
@@ -428,7 +446,7 @@ aboutclick();
 aboutscroll();
 missionscroll()
 workscroll();
-topnav()
-
+topnav();
+shopscroll();
 
 
