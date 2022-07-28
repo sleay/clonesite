@@ -4,6 +4,7 @@ const elChange = document.querySelector('.change >div');
 const elLi = document.querySelectorAll('.test > li');
 const elSec = document.querySelector('section div')
 
+history.scrollRestoration = "manual"
 
 let num = 0;
 let introscl = 0;
@@ -139,7 +140,7 @@ function headerevent(){
 };
 function topnav(){
     $(window).on('scroll',function(){
-            if( $(document).height()==$(window).scrollTop()+$(window).height()){
+            if( sclnum+$(window).height() > $('footer').offset().top){
                 $('.topnav > span').css({display:"inline"})
             }
             else{
@@ -256,32 +257,43 @@ function aboutscroll(){
         sclnum = $(window).scrollTop();
 
         
-        let sc = 0.55, ro = -15, tl=0;
+        let sc = 0.5, ro = -15, tl=0;
 
-        let tl1=50;
+        let tl1=100;
 
         if( $('.about').offset().top - sclnum <=$(window).height()&&$(window).height()+$('.about').height()>=sclnum){
-
-        scl4.a1 = sclnum;
-        if(scl4.a1 > scl4.a2){
-            if(scl3 <100){
-                ++scl3;
-            }
-        }
-        else{
-            if(scl3>0){
-                --scl3;
-            }
+    
+        // scl4.a1 = sclnum;
+        // if(scl4.a1 > scl4.a2){
+        //     if(scl3 <100){
+        //         ++scl3;
+        //     }
+        // }
+        // else{
+        //     if(scl3>0){
+        //         --scl3;
+        //     }
             
-        }
-        scl4.a2=scl4.a1;
+        // }
+        // scl4.a2=scl4.a1;
 
-        $('.text > .sub').css({transform:`translateY(${tl1-(scl3/2)}%)`,transition:'0.2s'})
-        $('.text > h2').css({transform:`translateY(${tl1-(scl3/2)}%)`,transition:'0.2s'})
-        $('.text > h3').css({transform:`translateY(${tl1-(scl3/2)}%)`,transition:'0.2s'})
-        $('.text > p:nth-of-type(2)').css({transform:`translateY(${tl1-(scl3/2)}%)`,transition:'0.2s'})
-        $('.card').css({transform:`translateY(${tl1-(scl3/2)}%)`,transition:'0.2s'})
+        
 
+        let trns1= sclnum/100;
+        // console.log(
+        //     sclnum,
+        //     )
+        // $('.text > .sub').css({transform:`translateY(${tl1-(scl3/2)}%)`,transition:'0.2s'})
+        // $('.text > h2').css({transform:`translateY(${tl1-(scl3/2)}%)`,transition:'0.2s'})
+        // $('.text > h3').css({transform:`translateY(${tl1-(scl3/2)}%)`,transition:'0.2s'})
+        // $('.text > p:nth-of-type(2)').css({transform:`translateY(${tl1-(scl3/2)}%)`,transition:'0.2s'})
+        // $('.card').css({transform:`translateY(${tl1-(scl3/2)}%)`,transition:'0.2s'})
+
+         $('.text > .sub').css({transform:`translateY(${tl1-(trns1*7)}%)`,transition:'0.2s'})
+        $('.text > h2').css({transform:`translateY(${tl1-(trns1*7)}%)`,transition:'0.2s'})
+        $('.text > h3').css({transform:`translateY(${tl1-(trns1*6)}%)`,transition:'0.2s'})
+        $('.text > p:nth-of-type(2)').css({transform:`translateY(${tl1-(trns1*6)}%)`,transition:'0.2s'})
+        $('.card').css({transform:`translateY(${tl1-(trns1*5.56)}%)`,transition:'0.2s'})
 
             if(sclnum >1200){
                
@@ -295,12 +307,17 @@ function aboutscroll(){
                     --scl1;
                 }
                 scl2.a2 = scl2.a1;
+                
+                let sca = sclnum/20000;
+                console.log(sca)
 
-                $('.front').css({ transform: `scale(${sc+(scl1/800)}) rotate(${ro+(scl1/8)}deg)`})
+                // $('.front').css({ transform: `scale(${sc+(scl1/800)}) rotate(${ro+(scl1/8)}deg)`});
+                $('.front').css({ transform: `scale(${sc+(sca)}) rotate(${ro+(scl1/8)}deg)`})
             
         }
 
         }
+        
 
     });
    
@@ -330,25 +347,42 @@ function missionscroll(){
             scl6.a2=scl6.a1;
 
           
-            console.log(sclnum,scl5);
+            
+            //1900~2700
 
-            $('.mission > h2').css({transform: `translateY(${50-(scl5/1.5)}%)`,transition:'0.3s'});
-            $('.mission > div').css({transform: `translateY(${50-(scl5/1.5)}%)`,transition:'0.3s'})
+            let aa =(sclnum/1000)-0.9;
+            console.log(aa);
+            // $('.mission > h2').css({transform: `translateY(${50-(scl5/1.5)}%)`,transition:'0.3s'});
+            // $('.mission > div').css({transform: `translateY(${50-(scl5/1.5)}%)`,transition:'0.3s'});
+
+            $('.mission > h2').css({transform: `translateY(${100-(aa*58.9)}%)`,transition:'0.3s'});
+            $('.mission > div').css({transform: `translateY(${100-(aa*58.9)}%)`,transition:'0.3s'})
 
 
 
             // $('.mission > ul').css({transform: `translateY(${0+(scl5/8)}%)`})
-            $('.list01').css({transform: `translateY(${list1.tl-(scl5/2)}%) rotate(${list1.ro+(scl5/8)}deg)`,transition:'0.3s'})
-            $('.list02').css({transform: `translateY(${list2.tl-(scl5/1.1)}%) rotate(${list2.ro+(scl5/5)}deg)`,transition:'0.3s'})
-            $('.list03').css({transform: `translateY(${list3.tl-(scl5*2.5)}%) rotate(${list3.ro+(scl5/5)}deg)`,transition:'0.3s'})
 
+            // $('.list01').css({transform: `translateY(${list1.tl-(scl5/2)}%) rotate(${list1.ro+(scl5/8)}deg)`,transition:'0.3s'})
+            // $('.list02').css({transform: `translateY(${list2.tl-(scl5/1.1)}%) rotate(${list2.ro+(scl5/5)}deg)`,transition:'0.3s'})
+            // $('.list03').css({transform: `translateY(${list3.tl-(scl5*2.5)}%) rotate(${list3.ro+(scl5/5)}deg)`,transition:'0.3s'})
 
+            if(sclnum > 2200){
+                $('.list01').css({transform: `translateY(${list1.tl-((aa*23.53))}%) rotate(${list1.ro+(scl5/8)}deg)`,transition:'0.3s'})
+                $('.list02').css({transform: `translateY(${list2.tl-((aa*29.5)*1.5)}%) rotate(${list2.ro+(scl5/5)}deg)`,transition:'0.3s'})
+                $('.list03').css({transform: `translateY(${list3.tl-((aa*76.48)*1.7)}%) rotate(${list3.ro+(scl5/5)}deg)`,transition:'0.3s'})
+            }
+            else{
+                $('.list01').css({transform: `translateY(${list1.tl}%) rotate(${list1.ro+(scl5/8)}deg)`,transition:'0.3s'})
+                $('.list02').css({transform: `translateY(${list2.tl}%) rotate(${list2.ro+(scl5/5)}deg)`,transition:'0.3s'})
+                $('.list03').css({transform: `translateY(${list3.tl}%) rotate(${list3.ro+(scl5/5)}deg)`,transition:'0.3s'})  
+            }
 
             // transform: translateY(40%) rotate(-15deg);
             // transform: translateY(50%) rotate(17deg);
             // transform: translateY(130%) rotate(0deg);
 
         } 
+        
         
         
             // $('.mission > ul').css({transform: `translateY(${0+(scl5/8)}%)`})
@@ -379,19 +413,39 @@ function workscroll(){
                 }
             }
             scl8.a2=scl8.a1;
-            
-            if(sclnum > $('.work').offset().top-$(window).height()&&sclnum<$('.spoonz').offset().top-$(window).height()){
-            $('.doguri > h2').css({transform:`translateY(${ro-(scl7)}%)`,transition:'0.3s'});
-            $('.doguri > div').css({transform:`translateY(${ro-(scl7)}%)`,transition:'0.3s'});
-            $('.doguri > p').css({transform:`translateY(${ro-(scl7)}%)`,transition:'0.3s'});
-            $('.doguri > img').css({transform:`translateY(${ro-(scl7)}%)`,transition:'0.3s'});
-            }
+            let aa= sclnum-3200;
+            //0~1200
+            let bb=aa/10
 
+            console.log(sclnum,aa)
+
+            
+            // if(sclnum > $('.work').offset().top-$(window).height()&&sclnum<$('.spoonz').offset().top-$(window).height()){
+            // $('.doguri > h2').css({transform:`translateY(${ro-(scl7)}%)`,transition:'0.3s'});
+            // $('.doguri > div').css({transform:`translateY(${ro-(scl7)}%)`,transition:'0.3s'});
+            // $('.doguri > p').css({transform:`translateY(${ro-(scl7)}%)`,transition:'0.3s'});
+            // $('.doguri > img').css({transform:`translateY(${ro-(scl7)}%)`,transition:'0.3s'});
+            // }
+
+            if(sclnum > $('.work').offset().top-$(window).height()&&sclnum<$('.spoonz').offset().top-$(window).height()){
+                $('.doguri > h2').css({transform:`translateY(${ro-(bb)}%)`,transition:'0.3s'});
+                $('.doguri > div').css({transform:`translateY(${ro-(bb)}%)`,transition:'0.3s'});
+                $('.doguri > p').css({transform:`translateY(${ro-(bb)}%)`,transition:'0.3s'});
+                $('.doguri > img').css({transform:`translateY(${ro-(bb)}%)`,transition:'0.3s'});
+                }
+            
+
+            // if(sclnum > $('.doguri').offset().top-$(window).height()&&sclnum<$('.amenity').offset().top-$(window).height()){
+            // $('.spoonz > div').css({transform:`translateY(${ro-(scl7/2)}%)`,transition:'0.3s'});
+            // $('.spoonz > p').css({transform:`translateY(${ro-(scl7/2)}%)`,transition:'0.3s'});
+            // $('.spoonz > img').css({transform:`translateY(${ro-(scl7/2)}%)`,transition:'0.3s'});
+            // }
             if(sclnum > $('.doguri').offset().top-$(window).height()&&sclnum<$('.amenity').offset().top-$(window).height()){
-            $('.spoonz > div').css({transform:`translateY(${ro-(scl7/2)}%)`,transition:'0.3s'});
-            $('.spoonz > p').css({transform:`translateY(${ro-(scl7/2)}%)`,transition:'0.3s'});
-            $('.spoonz > img').css({transform:`translateY(${ro-(scl7/2)}%)`,transition:'0.3s'});
-            }
+                $('.spoonz > div').css({transform:`translateY(${ro-(bb/2.4)}%)`,transition:'0.3s'});
+                $('.spoonz > p').css({transform:`translateY(${ro-(bb/2.4)}%)`,transition:'0.3s'});
+                $('.spoonz > img').css({transform:`translateY(${ro-(bb/2.4)}%)`,transition:'0.3s'});
+                }
+            
             console.log(sclnum)
 
             
@@ -406,32 +460,44 @@ function shopscroll(){
         if(sclnum+$(window).height() > $('.shop').offset().top){
 
 
-            let ro=50;
+            let ro=100;
             scl10.a1 = $(window).scrollTop();
             if(scl10.a1 > scl10.a2){
                 if(scl9 <100){
                     ++scl9;
+                    ch = scl9*2
                 }
             }
             else{
                 if(scl9 > 0){
-                    --scl9;
+                    --scl9*2;
                 }
             }
             scl10.a2=scl10.a1;
 
-            console.log(scl10,scl9)
+            
 
+            let aa=(sclnum+$(window).height())-5600;
+            //5600~6350
+            
+
+            let bb= aa/7.59;
+
+            console.log(bb)
 
 
 
         
-            $('.shop > div').css({transform:`translateY(${ro-(scl9/1.5)}%)`,transition:'0.3s'});
-            $('.shop > p').css({transform:`translateY(${ro-(scl9/1.5)}%)`,transition:'0.3s'});
-            $('.shop > img').css({transform:`translateY(${ro-(scl9/1.5)}%)`,transition:'0.3s'});
+            // $('.shop > div').css({transform:`translateY(${ro-(ch/1.5)}%)`,transition:'0.3s'});
+            // $('.shop > p').css({transform:`translateY(${ro-(ch/1.5)}%)`,transition:'0.3s'});
+            // $('.shop > img').css({transform:`translateY(${ro-(ch/1.5)}%)`,transition:'0.3s'});
 
+            $('.shop > div').css({transform:`translateY(${ro-(bb)}%)`,transition:'0.3s'});
+            $('.shop > p').css({transform:`translateY(${ro-(bb)}%)`,transition:'0.3s'});
+            $('.shop > img').css({transform:`translateY(${ro-(bb)}%)`,transition:'0.3s'});
 
         }
+        
 
         
 

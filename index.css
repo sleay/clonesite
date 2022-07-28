@@ -24,7 +24,6 @@ a {
     background-color: #FFBB00;
     overflow: hidden;
   }
-
   header {
     position: fixed;
     left: 0;
@@ -109,7 +108,6 @@ a {
   header > div:nth-of-type(1) {
     margin-top: 7%;
   }
-
   footer {
     width: 100%;
     padding: 5%;
@@ -136,7 +134,6 @@ a {
     font-weight: bold;
     white-space: pre-line;
   }
-
   .topnav {
     position: fixed;
     font-size: 14px;
@@ -168,11 +165,9 @@ a {
       opacity: 1;
     }
   }
-
   section {
     padding: 34px 0 0px;
   }
-
   .box {
     position: fixed;
     top: 0;
@@ -212,7 +207,6 @@ a {
     margin: 18% auto 0;
     width: 80%;
   }
-
   @-webkit-keyframes ani {
     0% {
       transform: translateY(0%);
@@ -221,7 +215,6 @@ a {
       transform: translateY(-100%);
     }
   }
-
   @keyframes ani {
     0% {
       transform: translateY(0%);
@@ -398,7 +391,6 @@ a {
     font-size: 12px;
     color: rgba(0, 0, 0, 0.6);
   }
-
   .about {
     position: relative;
     overflow: hidden;
@@ -427,6 +419,7 @@ a {
     font-family: "Noto Sans KR";
     font-weight: 500;
     margin-bottom: 30px;
+    transform: translateY(100%);
   }
   .about .text h2 {
     width: 120px;
@@ -439,6 +432,7 @@ a {
     background-image: url(./images/nc644-tit-bean-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    transform: translateY(100%);
   }
   .about .text h3 {
     text-align: center;
@@ -449,6 +443,7 @@ a {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     margin-bottom: 30px;
+    transform: translateY(100%);
   }
   .about .text h3 span {
     font-family: "Recoleta";
@@ -460,6 +455,7 @@ a {
     font-size: 14px;
     font-family: "Noto Sans KR";
     font-weight: 500;
+    transform: translateY(100%);
   }
   .about .text > p:nth-of-type(2) > span {
     display: inline-block;
@@ -471,6 +467,7 @@ a {
   .about .card {
     margin-bottom: 100px;
     height: 100vh;
+    transform: translateY(100%);
   }
   .about .card .flip {
     width: 100%;
@@ -491,7 +488,7 @@ a {
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     border: solid 2px #000;
-    transform: scale(0.55) rotate(-15deg) translateX(0%);
+    transform: scale(0.5) rotate(-15deg) translateX(0%);
     transition: 0.5s;
   }
   .about .card .flip .warp .front img {
@@ -623,7 +620,6 @@ a {
     height: 14px;
     transform: rotate(-90deg);
   }
-
   .mission h2 {
     width: 120px;
     height: 41px;
@@ -635,6 +631,10 @@ a {
     background-image: url(./images/nc644-tit-bean-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    transform: translateY(100%);
+  }
+  .mission > div {
+    transform: translateY(100%);
   }
   .mission > div p {
     text-align: center;
@@ -789,7 +789,6 @@ a {
   .mission ul .list03 img {
     width: 100%;
   }
-
   .gradient {
     width: 100%;
     height: 400px;
@@ -841,11 +840,9 @@ a {
     background-size: cover;
     vertical-align: middle;
   }
-
   .work {
     padding: 0;
   }
-
   .doguri {
     padding-bottom: 15px;
     background-color: #FCEBF3;
@@ -861,10 +858,12 @@ a {
     background-image: url(./images/nc644-tit-bean-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    transform: translateY(50%);
   }
   .doguri > div {
     width: 170px;
     margin: 0 auto 15px;
+    transform: translateY(50%);
   }
   .doguri > div img {
     width: 100%;
@@ -900,13 +899,14 @@ a {
     color: #593137;
     font: bold 16px "Noto Sans KR";
     letter-spacing: -0.6px;
+    transform: translateY(50%);
   }
   .doguri > img {
     display: block;
     width: 80%;
     margin: 0 auto;
+    transform: translateY(50%);
   }
-
   .spoonz {
     width: 100%;
     background-color: #FFADA7;
@@ -960,7 +960,6 @@ a {
     margin: 0 auto;
     width: 90%;
   }
-
   .amenity {
     width: 100%;
     position: relative;
@@ -1007,7 +1006,6 @@ a {
   .amenity > img {
     width: 100%;
   }
-
   .shop {
     width: 100%;
     background-color: #fff;
